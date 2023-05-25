@@ -6,17 +6,22 @@ function testClock() {
     let minutes = clockInit.getMinutes();
     let seconds = clockInit.getSeconds();
 
+
+    process.stdout.write(`${hours.toString()}:${minutes.toString()}:${seconds.toString()} \r`);
+    
+
     return {
         hours,
         minutes,
         seconds
     }
+
 }
 
 
 const {hours, minutes, seconds} = testClock();
 
-console.log(hours);
-console.log(minutes);
-console.log(seconds);
-console.log(testClock());
+
+
+
+testInterval = setInterval(testClock,1000);
