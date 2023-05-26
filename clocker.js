@@ -18,4 +18,22 @@ function testClock() {
 
 }
 
-testInterval = setInterval(testClock,1000);
+//testInterval = setInterval(testClock,1000);
+
+
+function backwardsClock() {
+    const event = new Date('August 19, 2023 23:15:30');
+    const today = new Date();
+
+    const eventMS = event.getTime();
+    const todayMS = today.getTime();
+
+    console.log(eventMS, todayMS)
+
+    const difference = eventMS - todayMS;
+
+    console.log(difference);
+
+}
+
+backwardsClock();
